@@ -8,17 +8,20 @@ function App() {
 
 
   const decreaseValue = () => {
-    setCounter(counter--);
+    setCounter((prevState) => prevState - 1);
   }
   const resetValue = () => {
-    setCounter(counter = 0);
+    setCounter((prevState) => prevState * 0);
   }
   const increaseValue = () => {
-    setCounter(counter++);
+
+    setCounter((prevState) => prevState + 1);
+
   }
 
   return (
     <>
+
       <p>
         <h1>The Counter</h1>
         <h3>Counter Value : {counter}</h3>
